@@ -38,7 +38,7 @@ export class LlistaQuadresComponent implements OnInit {
 
   visualitzar(idImatge: string) {
     console.log(idImatge);
-    this.urlImatge = "https://www.artic.edu/iiif/2/" + idImatge + "/full/" + this.midaImatge + ",/0/default.jpg";
+    this.urlImatge = "https://www.artic.edu/iiif/2/" + idImatge + "/full/843,/0/default.jpg";
     console.log(this.urlImatge);
   }
 
