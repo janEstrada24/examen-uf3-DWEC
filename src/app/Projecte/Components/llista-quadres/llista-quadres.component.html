@@ -1,23 +1,37 @@
 <p>llista-quadres works!</p>
-<table>
+<table border="1">
     <tr>
         <th>Titol</th>
         <th>ID</th>
         <th>Imatge</th>
         <th>Visualitzar</th>
     </tr>
-    <tr>
-        <td *ngFor="">
+    <tr *ngFor="let quadre of this.quadres">
+        <td>
+            {{quadre.title}}
+        </td>
+        <td>
+            {{quadre.id}}
+        </td>
+        <td >
 
         </td>
-        <td *ngFor="">
-
-        </td>
-        <td *ngFor="">
-
-        </td>
-        <td *ngFor="">
-
+        <td>
+            <button>Veure</button>
         </td>
     </tr>
 </table>
+
+<br>
+
+<label>
+    Documents per plana:
+    <input [(ngModel)]="this.documentsPlana" type="number">
+</label>
+
+<label>
+    Plana    
+    <input [(ngModel)]="this.numeroPlana" type="number">
+</label>
+
+<button>Accedir</button>

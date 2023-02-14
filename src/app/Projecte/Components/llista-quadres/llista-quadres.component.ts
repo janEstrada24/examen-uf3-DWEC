@@ -8,15 +8,23 @@ import { quadresAPIService } from '../../Serveis/API/quadres-api/quadres-api.ser
 })
 export class LlistaQuadresComponent implements OnInit {
 
+  documentsPlana!: number;
+  numeroPlana!: number;
+  quadres!: Array<any>;
+
   constructor(private httpClient: quadresAPIService) {
     this.httpClient.getQuadres().subscribe(
       response => {
-        console.log(response.data);
-        //this.fact = response.fact;
+        this.quadres = response.data;
+        console.log(this.quadres);
       });
   }
 
   ngOnInit(): void {
+  }
+
+  canviarNumeroDocumentsIPlana() {
+
   }
 
 }
