@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class QuadresAPIService {
+export class quadresAPIService {
 
   constructor(private http: HttpClient) { };
   
