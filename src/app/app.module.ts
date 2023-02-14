@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router'
 
 import { AppComponent } from './app.component';
 import { LlistaQuadresComponent } from './Projecte/Components/llista-quadres/llista-quadres.component';
+import { LlistaQuadresFixaComponent } from './Projecte/Components/llista-quadres-fixa/llista-quadres-fixa.component';
 
 const routes: Routes = []
 
@@ -13,7 +14,8 @@ const routes: Routes = []
 @NgModule({
   declarations: [
     AppComponent,
-    LlistaQuadresComponent
+    LlistaQuadresComponent,
+    LlistaQuadresFixaComponent
   ],
   imports: [
     BrowserModule, 

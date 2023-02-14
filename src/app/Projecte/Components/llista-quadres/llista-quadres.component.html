@@ -1,4 +1,6 @@
 <p>llista-quadres works!</p>
+
+<input type="text">
 <table border="1">
     <tr>
         <th>Titol</th>
@@ -13,11 +15,14 @@
         <td>
             {{quadre.id}}
         </td>
+        <!--<td *ngIf="quadre.thumbnail.lqip != null" >
+            <img src="{{quadre.thumbnail.lqip}}" >
+        </td>-->
         <td >
-
+            <img src="" >
         </td>
         <td>
-            <button>Veure</button>
+            <p (click)="visualitzar(quadre.image_id)">Veure</p>
         </td>
     </tr>
 </table>
@@ -26,12 +31,14 @@
 
 <label>
     Documents per plana:
-    <input [(ngModel)]="this.documentsPlana" type="number">
+    <input [(ngModel)]="this.documentsPlana" type="text">
 </label>
 
 <label>
     Plana    
-    <input [(ngModel)]="this.numeroPlana" type="number">
+    <input [(ngModel)]="this.numeroPlana" type="text">
 </label>
 
 <button>Accedir</button>
+
+<img [src]="obtenirUrlImatge()" >

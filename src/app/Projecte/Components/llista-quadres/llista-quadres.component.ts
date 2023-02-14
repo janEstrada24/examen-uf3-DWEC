@@ -8,8 +8,10 @@ import { quadresAPIService } from '../../Serveis/API/quadres-api/quadres-api.ser
 })
 export class LlistaQuadresComponent implements OnInit {
 
-  documentsPlana!: number;
-  numeroPlana!: number;
+  documentsPlana!: string;
+  numeroPlana!: string;
+  midaImatge!: string;
+  urlImatge!: string;
   quadres!: Array<any>;
 
   constructor(private httpClient: quadresAPIService) {
@@ -21,10 +23,26 @@ export class LlistaQuadresComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.httpClient.getQuadres().subscribe(
+      response => {
+        this.quadres = response.data;
+        console.log(this.quadres);
+      });
   }
 
-  canviarNumeroDocumentsIPlana() {
 
+  canviarTamanyImatge(nouValor: string) {
+    this.midaImatge = nouValor;
+    console.log(this.midaImatge);
   }
 
+  visualitzar(idImatge: string) {
+    console.log(idImatge);
+    this.urlImatge = "https://www.artic.edu/iiif/2/" + idImatge + "/full/" + this.midaImatge + ",/0/default.jpg";
+    console.log(this.urlImatge);
+  }
+
+  obtenirUrlImatge() {
+    return this.urlImatge;
+  }
 }
