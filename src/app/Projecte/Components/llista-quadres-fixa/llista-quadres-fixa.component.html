@@ -1,1 +1,31 @@
-<p>llista-quadres-fixa works!</p>
+<table border="1">
+    <tr>
+        <th>Titol</th>
+        <th>Imatge</th>
+        <th>Artista</th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th>Name</th>
+        <th>Birth</th>
+        <th>Death</th>
+    </tr>
+    <tr *ngFor="let quadre of this.quadres">
+        <td>
+            {{quadre.title}}
+        </td>
+        <td>
+            
+        </td>
+        <td>
+            
+        </td>
+        <td>
+            
+        </td>
+        <td>
+            {{quadre.artist}}
+        </td>
+    </tr>
+</table>

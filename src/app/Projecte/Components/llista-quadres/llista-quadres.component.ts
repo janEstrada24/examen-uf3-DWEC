@@ -42,6 +42,20 @@ export class LlistaQuadresComponent implements OnInit {
     console.log(this.urlImatge);
   }
 
+  obtenirThumbnail(quadreId: string) {
+    console.log("accedit a obtenirThumbnail");
+    for(let i = 0; i < this.quadres.length; i++) {
+      if(this.quadres[i].id == quadreId) {
+        if(this.quadres[i].thumbnail.lqip != null) {
+          return this.quadres[i].thumbnail.lqip;
+        }
+        else {
+          return "";
+        }
+      }
+    }
+  }
+
   obtenirUrlImatge() {
     return this.urlImatge;
   }
